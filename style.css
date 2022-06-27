@@ -1,0 +1,32 @@
+.code__adresse {
+  margin: 10px;
+  padding: 10px;
+  border-left: 4px solid #005;
+  background-color: #bbb;
+}
+
+.boite__modale {
+  background-color: red;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 25vh;
+  left: 25vw;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.boite__X {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.boite__modale__ouvrir {
+  transform: scale(1);
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
