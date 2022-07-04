@@ -6,8 +6,9 @@
 }
 
 .boite__modale {
-  background-color: red;
+  background-color: blue;
   position: absolute;
+  color : white;
   width: 50vw;
   height: 50vh;
   top: 25vh;
