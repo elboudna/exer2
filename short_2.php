@@ -1,7 +1,8 @@
 <?php 
 /**
  * Plugin name: Short_2
- * Author: ElBoudna
+ * Description: structure d'extension utilisant plusieurs dossiers et permettant d'afficher une adresse
+ * Author: Elboudna
  * Plugin URI: https://github.com/elboudna/exer2
  */
 function sh2_31w_enqueue()
@@ -27,8 +28,8 @@ function genere_adresse(){
     $contenu = '<code class="code__adresse" style="display:none">';
     $contenu .= get_the_content();
     $contenu .= '</code>';
-    $contenu .= '<button id="mon_bouton">OK</button>';
+    $contenu .= '<button id="mon_bouton">Afficher</button>';
     return $contenu;
 }
 
-add_shortcode('adr', 'genere_adresse');
+add_shortcode('adresse', 'genere_adresse');
