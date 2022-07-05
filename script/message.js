@@ -1,40 +1,38 @@
+
 (function(){
-    let elmBody = document.querySelector('body')
-    let elmBoite__modale
-    let elmBoite__X
-    let elmBoite__contenu
-    //document.querySelector('.boite__modale')
-    let elmOK = document.querySelector('#mon_bouton')
 
-    function creer_boite_modale(){
-        elmBoite__modale = document.createElement('div')
-        elmBoite__contenu = document.createElement('div')
-        elmBoite__contenu.classList.add('elmBoite__contenu')
-        elmBoite__X = document.createElement('button')
-        elmBoite__modale.appendChild(elmBoite__contenu)
-        elmBoite__modale.appendChild(elmBoite__X)
-        elmBoite__X.classList.add('boite__X')
-        elmBoite__X.innerHTML = "X"
-        elmBoite__modale.classList.add('boite__modale')
-        elmBody.appendChild(elmBoite__modale);
-        let mon_petit_contenu = document.querySelector('.code__adresse').innerHTML
-        elmBoite__contenu.innerHTML =  mon_petit_contenu
-    }
-    function detruire_boite_modale(){
-       elmBoite__modale.removeChild(elmBoite__X)
-       elmBody.removeChild(elmBoite__modale)
-    }
-    creer_boite_modale()
-    elmOK.addEventListener('mousedown', function(){
-        console.log('Bravo le script fonctionne')
+    let elBoite__modale;
+    let elBoite__X;
+    let elBody = document.querySelector('body');
+    let elBoiteContenu;
+
+    function creerBoiteModale() {
+        elBoiteContenu = document.createElement('div');
+        elBoiteContenu.classList.add('elBoiteContenu');
+        elBoite__modale = document.createElement('div');
+        elBoite__X = document.createElement('button');
+        elBoite__X.classList.add('boite__x');
+        elBoite__modale.appendChild(elBoite__X);
+        elBoite__modale.appendChild(elBoiteContenu);
         
-        elmBoite__modale.classList.add('boite__modale__ouvrir')
-        console.log(elmBoite__modale.classList)
+        elBoite__X.innerHTML = "X";
+        elBoiteContenu.innerHTML = "3 800, rue Sherbrooke Est Montréal (Québec) H1X 2A2 | 514 254-7131";
+        elBoite__modale.classList.add('boite__modale');
+        elBody.appendChild(elBoite__modale);
+    }
+
+    creerBoiteModale();
+
+    let btn = document.querySelector("#mon_bouton");
+    //document.querySelector('.boite__modale');
+    
+    btn.addEventListener("mousedown", function(){
+        console.log("Bravo, le script fonctionne");
+        elBoite__modale.classList.add('boite__modale__ouvrir');
     })
 
-    elmBoite__X.addEventListener('mousedown', function(){
-      
-        elmBoite__modale.classList.remove('boite__modale__ouvrir')
-        console.log(elmBoite__modale.classList)
+    elBoite__X.addEventListener('mousedown', function(){
+        elBoite__modale.classList.remove('boite__modale__ouvrir');
     })
+
 })()
