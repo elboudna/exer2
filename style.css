@@ -2,13 +2,12 @@
   margin: 10px;
   padding: 10px;
   border-left: 4px solid #005;
-  background-color: grey;
+  background-color: #bbb;
 }
 
 .boite__modale {
-  background-color: blue;
+  background-color: red;
   position: absolute;
-  color : white;
   width: 50vw;
   height: 50vh;
   top: 25vh;
@@ -30,4 +29,9 @@
   transform: scale(1);
   opacity: 1;
 }
-/*# sourceMappingURL=style.css.map */
+
+.elBoiteContenu {
+  text-align: center;
+  margin-top: 25%;
+  font-size: 16pt;
+}/*# sourceMappingURL=style.css.map */
